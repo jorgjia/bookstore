@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+	$('.btn-primary').on('click',function(){
+		$.ajax({
+			url:'/login',
+			type:'POST',
+			data:{
+				username:$('#username').val(),
+				
+				password:$('#password').val()
+
+			},
+			success:function(json){
+				console.log(json);
+
+			}
+
+
+		});
+
+	});
+
+
+	});
+
+
+
+
+
+
+</script>
+
+
+	</head>
+	<body>
+		<br><br>
+		<a href="index.html"style="margin-left:10px">Home</a>
+
+
+		 
+		<a href="SignUp.html"style="margin-left:10px">Sign Up </a>
+			 
+			<div class="jumbotron text-center" style="background-color:lightblue; border:solid 3px brown;">
+				 
+				 <img src="http://www.gteclibrary.com/images/banner.jpg">
+			</div>
+
+
+<div class="container">
+	
+	<legend>Login</legend>
+	Username:<input type="text" id="username">
+	<br><br>
+	Password:<input type="password" id="password"><br><br>	
+	<button class="btn btn-primary">Login</button>
+	
+</div>
+
+
+
+
+	</body>
+</html>
